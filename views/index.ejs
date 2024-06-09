@@ -1,0 +1,32 @@
+ 
+ <%- include('./partials/head.ejs') %>
+
+
+<div class="content w-full h-[600px]  mt-10 flex  overflow-hidden items-center justify-between">
+  <div class="left w-[600px] h-full flex flex-col items-start justify-center gap-6 ">
+ <h1  class="text-5xl font-bold text-start tracking-light" id="index-heading">Forget about your <br> messy notes</h1>
+ <p class="text-lg  text-start pr-4 font-semibold text-zinc-600">Take notes, organize, and prioritize your tasks with ease using our website</p>
+
+
+<% if (locals.user) { %>
+  <h1>hai</h1>
+ 
+<% } %>
+
+
+
+<a href="/signup"> <button class="px-6 py-3 text-white bg-blue-500 hover:bg-indigo-700 shadow-md  rounded-lg text-xl ">Try Now</button></a>
+
+  </div>
+<div class="right w-[600px] h-full ">
+  <img src="/image/image.png" alt="" class="w-full h-full object-contain">
+</div>
+</div>
+
+
+
+
+  </div>
+</body>
+
+</html>

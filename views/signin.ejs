@@ -1,0 +1,36 @@
+
+<%- include('./partials/head.ejs') %>
+
+   
+
+<div class="bg-gray-100 flex justify-center items-center h-screen flex-col">
+    <% if (message) { %>
+        <div class="w-1/2 p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-200 dark:bg-gray-800 dark:text-red-400" role="alert">
+            <span class="font-medium">Signin alert!</span> <%= message %> 
+        </div>
+    <% } %>
+    <div class="w-full max-w-md bg-white rounded-lg shadow-md p-8">
+        <h2 class="text-2xl font-bold text-center mb-6">Sign In</h2>
+        <form action="/signin" method="POST" class="space-y-6">
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <input type="email" id="email" name="email" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            </div>
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" id="password" name="password" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            </div>
+            <div>
+                <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Sign In
+                </button>
+            </div>
+            <p class="text-center">Or If you are new user then <a href="/signup" class="text-blue-500 hover:text-blue-700">Signup</a></p>
+
+        </form>
+    </div>
+    </div>
+    </div>
+    
+</body>
+</html>
